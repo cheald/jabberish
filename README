@@ -1,22 +1,25 @@
-Jabberish
-
 Jabberish is a DRb-driven Jabber server designed for use in multi-server Rails apps.
 Just drop in the plugin, configure, start the server, and off you go.
 
+To install it: 
+
+  script/plugin install git://github.com/cheald/jabberish.git
+  
 Jabberish fails silently if the jabberish DRb process isn't running, so it won't bring your app crashing down around your shoulders.
 
 1) edit config/jabberish.yml with your desired settings
 2) rake jabberish:start
 3) Invoke Jabberish from your code.
 
-  JabberishAgent.deliver("cheald@gmail.com", message_to_deliver)
+  JabberishAgent.deliver("your-email@gmail.com", message_to_deliver)
 
 For example, to send yourself IMs when your app has an error, in application.rb:
 
   def rescue_action(e)
-	# The third parameter is "throttle", which will cause Jabberish to refuse to send the same message to a given recipient twice in a row
+	# The third parameter is "throttle", which will cause Jabberish to refuse
+	# to send the same message to a given recipient twice in a row
     msg = sprintf("[#%s] %s (%s)", Time.now.to_i, e, e.backtrace.first)
-    JabberishAgent.deliver("cheald@gmail.com", msg, true)
+    JabberishAgent.deliver("your-email@gmail.com", msg, true)
   end
   
 Jabberish relies on the xmpp4r-simple gem, so if you are having problems, install it:
