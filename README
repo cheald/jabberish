@@ -19,4 +19,8 @@ For example, to send yourself IMs when your app has an error, in application.rb:
     JabberishAgent.deliver("cheald@gmail.com", msg, true)
   end
   
+Jabberish relies on the xmpp4r-simple gem, so if you are having problems, install it:
+
+  gem install xmpp4r-simple
+  
 Enjoy!
