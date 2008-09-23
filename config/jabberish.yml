@@ -1,0 +1,15 @@
+development:
+  username: your_sender_username@gmail.com
+  password: your_sender_password
+  recipient: your_recipient@gmail.com
+  host: localhost
+  port: 35505
+  pids: tmp
+  
+production:
+  username: your_sender_username@gmail.com
+  password: your_sender_password
+  recipient: your_recipient@gmail.com
+  host: localhost
+  port: 35506
+  pids: tmp
