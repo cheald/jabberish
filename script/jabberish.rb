@@ -7,7 +7,7 @@ require 'optparse'
 class JabberClient
 	def initialize
 		options = OptionParser.new
-		options.on('-e', '--env=ENVIRONMENT', 'Port your cluster starts on') { |o| @env = o }
+		options.on('-e', '--env=ENVIRONMENT', 'Environment to invoke the IM client for') { |o| @env = o }
 		options.parse!
 	end
 	
