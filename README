@@ -5,7 +5,7 @@ To install it:
 
   script/plugin install git://github.com/cheald/jabberish.git
   
-Jabberish calls in your code will fail silently if the Jabberish DRb process isn't running, so if the daemon goes missing, it won't bring your app crashing down around your shoulders. You just won't get IMs. If it has to stay up, then use something like monit or god to keep an eye on it.
+Jabberish calls in your code will fail silently if the Jabberish DRb process isn't running, so if the daemon goes missing, it won't bring your app crashing down around your shoulders - you just won't get IMs.
 
 1) edit config/jabberish.yml with your desired settings
 2) rake jabberish:start
